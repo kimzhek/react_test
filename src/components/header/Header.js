@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './header.scss';
 
-function Footer() {
+function Header() {
 	const [isOpen, setMenu] = useState(false);  // 메뉴의 초기값을 false로 설정
 	const toggleMenu = () => {
 		setMenu(isOpen => !isOpen); // on,off
@@ -70,4 +70,4 @@ function Footer() {
 	);
 };
 
-export default Footer;
+export default Header;
