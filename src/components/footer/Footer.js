@@ -31,9 +31,9 @@ function Footer() {
 							<ul className={styles.info}>
 								<li><strong>기업명</strong> <span>TEST</span></li>
 								<li><strong>대표자</strong> <span>홍길동</span></li>
-								<li><strong>주소</strong> <span>서울시 서초구 남부순환로 2583 TEST 7F (서희타워)</span></li>
-								<li><strong>사업자등록번호</strong> <span>101-00-12345</span></li>
-								<li><strong>통신판매업신고번호</strong> <span>종로 제2003-01234호</span></li>
+								<li><strong>주소</strong> <span>서울시 서초구 남부순환로 XXX XXXXXX</span></li>
+								<li><strong>사업자등록번호</strong> <span>000-00-12345</span></li>
+								<li><strong>통신판매업신고번호</strong> <span>종로 제1234-01234호</span></li>
 								<li><strong>개인정보 관리책임자</strong> <span>IT지원 팀장</span></li>
 							</ul>
 							<div className={styles.copyright}>

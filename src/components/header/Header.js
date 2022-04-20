@@ -11,37 +11,37 @@ function Footer() {
 			<h1 className="logo"><a href="#">LOGO</a></h1>
 			<ul className="gnb">
 				<li>
-					<a href="#">레일예약</a>
+					<a href="#">GNB01</a>
 					<div className="step">
 						<ul>
-							<li><a href="#">레일예약</a></li>
+							<li><a href="#">GNB01</a></li>
 						</ul>
 					</div>
 				</li>
 				<li>
-					<a href="#">H 레일 텔</a>
+					<a href="#">GNB02</a>
 					<div className="step">
 						<ul>
-							<li><a href="#">H레일텔</a></li>
+							<li><a href="#">GNB02</a></li>
 						</ul>
 					</div>
 				</li>
 				<li>
-					<a href="#">프로모션</a>
+					<a href="#">GNB03</a>
 					<div className="step">
 						<ul>
-							<li><a href="#">프로모션</a></li>
+							<li><a href="#">GNB03</a></li>
 						</ul>
 					</div>
 				</li>
 				<li className="selected">
-					<a href="#">마이페이지</a>
+					<a href="#">GNB04</a>
 					<div className="step">
 						<ul>
-							<li className="selected"><a href="#">예약조회</a></li>
-							<li><a href="#">혜택정보</a></li>
-							<li><a href="#">리포트</a></li>
-							<li><a href="#">정보관리</a></li>
+							<li className="selected"><a href="#">GNB04_01</a></li>
+							<li><a href="#">GNB04_02</a></li>
+							<li><a href="#">GNB04_03</a></li>
+							<li><a href="#">GNB04_04</a></li>
 						</ul>
 					</div>
 					<div className="balloon-box">
@@ -52,11 +52,11 @@ function Footer() {
 					</div>
 				</li>
 				<li>
-					<a href="#">고객지원</a>
+					<a href="#">GNB05</a>
 					<div className="step">
 						<ul>
-							<li><a href="#">공지사항</a></li>
-							<li><a href="#">FAQ</a></li>
+							<li><a href="#">GNB05_01</a></li>
+							<li><a href="#">GNB05_02</a></li>
 						</ul>
 					</div>
 				</li>

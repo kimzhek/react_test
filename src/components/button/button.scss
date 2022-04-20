@@ -1,0 +1,88 @@
+@import '../../assets/scss/_variables.scss';
+@import '../../assets/scss/_mixin.scss';
+
+/* button */
+.btn {
+	@each $color, $value in $theme-colors {
+		&-#{$color} {
+			@include buttonType ($value, $value);
+			&-outline {
+				@include buttonType ($value, $white, $value);
+			}
+		}
+	}
+	&-light {border-color:#ddd; background-color:#ddd;}
+	&-dark-outline {border-color:#666;}
+	&-default-outline {border-color:$line-c8; color:$dark;}
+	
+	// height
+	&-m {height:30px;}
+	&-l {height:50px; font-size:16px;}
+	&-xl {height:60px; font-size:16px;}
+	&-block {width:100%;}
+
+	// width
+	&-w-110 {width:110px;}
+	&-w-130 {width:130px;}
+	&-w-140 {width:140px;}
+	&-w-150 {width:150px;}
+	&-w-180 {width:180px;}
+	&-w-200 {width:200px;}
+	&-w-220 {width:220px;}
+	&-w-290 {width:290px;}
+
+	// $iconName:reset;
+	// &-icon-#{$iconName} {
+	// 	@include buttonIconType(14px, 13px, 30px, 'icon_'+$iconName+'');
+	// }
+	// $iconName:search;
+	// &-icon-#{$iconName} {
+	// 	@include buttonIconType(15px, 15px, 30px, 'icon_'+$iconName+'');
+	// }
+	// $iconName:excel;
+	// &-icon-#{$iconName} {
+	// 	@include buttonIconType(16px, 16px, 18px, 'icon_'+$iconName+'');
+	// }
+
+	// &-icon-more {
+	// 	position:relative;
+	// 	display:flex;
+	// 	justify-content:center;
+	// 	align-items:center;
+	// 	width:30px;
+	// 	height:30px;
+	// 	border:1px solid $line-e0;
+	// 	background-color:$white;
+	// 	font-size:0 !important;
+	// 	@include buttonIconType(9px, 9px, 0, 'icon_select03'){
+	// 		transition:all .2s cubic-bezier(0, 0, 0, 1);
+	// 	};
+	// }
+	// &-guide {
+	// 	display:inline-block;
+	// 	color:$dark;
+	// 	&:after {
+	// 		content:'';
+	// 		display:inline-block;
+	// 		width:20px;
+	// 		height:20px;
+	// 		margin-left:5px;
+	// 		vertical-align:-4px;
+	// 		background-image:url(''+$url-common+'icon_qm.png');
+	// 		@include commonBgImg();
+	// 	}
+	// }
+	&-column {
+		flex-direction:column;
+		height:80px;
+		padding-top:15px;
+		padding-bottom:15px;
+		line-height:24px;
+	}
+	&-txt-desc {
+		display:block;
+		width:100%;
+		color:$secondary;
+		font-size:13px;
+	}
+}
