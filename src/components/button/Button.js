@@ -1,12 +1,9 @@
 import React from 'react'
 import './button.scss';
 
-class ButtonComponent extends React.Component {
-	render() {
-		const { className, value, disabled } = this.props
-		return (
-			<button className={className} disabled={disabled}>{value}</button>
-		);
-	};
+function ButtonComponent(props) {
+	return (
+		<button className={props.className} disabled={props.disabled}>{props.value}</button>
+	);
 };
 export default ButtonComponent;
