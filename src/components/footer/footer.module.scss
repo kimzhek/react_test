@@ -8,7 +8,7 @@
 	background-color: $dark;
 	flex-shrink: 0;
 
-	.footerInner {
+	.footer-inner {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -16,7 +16,7 @@
 		margin: 0 auto;
 	}
 
-	.fMenu {
+	.f-menu {
 		display: flex;
 
 		li {
@@ -49,7 +49,7 @@
 		}
 	}
 
-	.fFamilySite {
+	.f-family-site {
 		position: relative;
 
 		button {
@@ -111,7 +111,7 @@
 		}
 	}
 
-	.fInfo {
+	.f-info {
 		width: 100%;
 		color: $light;
 		line-height: 30px;
@@ -138,16 +138,16 @@
 			}
 		}
 
-		.infoContent {
+		.info-content {
 			overflow: hidden;
 
-			.contentInner {
+			.content-inner {
 				@include slideAnimate(0, -1000px, .5s, cubic-bezier(1, 0, 1, 1));
 			}
 		}
 
 		&.selected {
-			.contentInner {
+			.content-inner {
 				@include slideAnimate(600px, 0, .4s, cubic-bezier(0, 0, 0, 1));
 			}
 
