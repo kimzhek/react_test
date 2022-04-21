@@ -10,8 +10,8 @@ function Footer() {
 		<footer id={styles["footer"]}>
 			<div className={styles["footer-inner"]}>
 				<ul className={styles["f-menu"]}>
-					<li><a href="#">이용약관</a></li>
-					<li><a href="#">개인정보처리방침</a></li>
+					<li><a href="#!">이용약관</a></li>
+					<li><a href="#!">개인정보처리방침</a></li>
 				</ul>
 
 				<div className={styles["f-family-site"]}>
@@ -45,7 +45,7 @@ function Footer() {
 				</div>
 			</div>
 		</footer>
-  );
+	);
 };
 
 export default Footer;
