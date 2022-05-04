@@ -1,0 +1,306 @@
+/* button */
+.btn-primary {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	padding: 0 20px;
+	border: 1px solid #0d6efd;
+	background-color: #0d6efd;
+	color: #fff;
+	font-size: 13px;
+}
+.btn-primary.disabled, .btn-primary:disabled {
+	border-color: #ced4da;
+	background: #ced4da;
+	color: #adb5bd;
+	cursor: default;
+}
+.btn-primary-outline {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	padding: 0 20px;
+	border: 1px solid #0d6efd;
+	background-color: #fff;
+	color: #0d6efd;
+	font-size: 13px;
+}
+.btn-primary-outline.disabled, .btn-primary-outline:disabled {
+	border-color: #ced4da;
+	background: #ced4da;
+	color: #adb5bd;
+	cursor: default;
+}
+.btn-secondary {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	padding: 0 20px;
+	border: 1px solid #6c757d;
+	background-color: #6c757d;
+	color: #fff;
+	font-size: 13px;
+}
+.btn-secondary.disabled, .btn-secondary:disabled {
+	border-color: #ced4da;
+	background: #ced4da;
+	color: #adb5bd;
+	cursor: default;
+}
+.btn-secondary-outline {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	padding: 0 20px;
+	border: 1px solid #6c757d;
+	background-color: #fff;
+	color: #6c757d;
+	font-size: 13px;
+}
+.btn-secondary-outline.disabled, .btn-secondary-outline:disabled {
+	border-color: #ced4da;
+	background: #ced4da;
+	color: #adb5bd;
+	cursor: default;
+}
+.btn-success {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	padding: 0 20px;
+	border: 1px solid #198754;
+	background-color: #198754;
+	color: #fff;
+	font-size: 13px;
+}
+.btn-success.disabled, .btn-success:disabled {
+	border-color: #ced4da;
+	background: #ced4da;
+	color: #adb5bd;
+	cursor: default;
+}
+.btn-success-outline {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	padding: 0 20px;
+	border: 1px solid #198754;
+	background-color: #fff;
+	color: #198754;
+	font-size: 13px;
+}
+.btn-success-outline.disabled, .btn-success-outline:disabled {
+	border-color: #ced4da;
+	background: #ced4da;
+	color: #adb5bd;
+	cursor: default;
+}
+.btn-info {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	padding: 0 20px;
+	border: 1px solid #0dcaf0;
+	background-color: #0dcaf0;
+	color: #fff;
+	font-size: 13px;
+}
+.btn-info.disabled, .btn-info:disabled {
+	border-color: #ced4da;
+	background: #ced4da;
+	color: #adb5bd;
+	cursor: default;
+}
+.btn-info-outline {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	padding: 0 20px;
+	border: 1px solid #0dcaf0;
+	background-color: #fff;
+	color: #0dcaf0;
+	font-size: 13px;
+}
+.btn-info-outline.disabled, .btn-info-outline:disabled {
+	border-color: #ced4da;
+	background: #ced4da;
+	color: #adb5bd;
+	cursor: default;
+}
+.btn-warning {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	padding: 0 20px;
+	border: 1px solid #ffc107;
+	background-color: #ffc107;
+	color: #fff;
+	font-size: 13px;
+}
+.btn-warning.disabled, .btn-warning:disabled {
+	border-color: #ced4da;
+	background: #ced4da;
+	color: #adb5bd;
+	cursor: default;
+}
+.btn-warning-outline {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	padding: 0 20px;
+	border: 1px solid #ffc107;
+	background-color: #fff;
+	color: #ffc107;
+	font-size: 13px;
+}
+.btn-warning-outline.disabled, .btn-warning-outline:disabled {
+	border-color: #ced4da;
+	background: #ced4da;
+	color: #adb5bd;
+	cursor: default;
+}
+.btn-danger {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	padding: 0 20px;
+	border: 1px solid #dc3545;
+	background-color: #dc3545;
+	color: #fff;
+	font-size: 13px;
+}
+.btn-danger.disabled, .btn-danger:disabled {
+	border-color: #ced4da;
+	background: #ced4da;
+	color: #adb5bd;
+	cursor: default;
+}
+.btn-danger-outline {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	padding: 0 20px;
+	border: 1px solid #dc3545;
+	background-color: #fff;
+	color: #dc3545;
+	font-size: 13px;
+}
+.btn-danger-outline.disabled, .btn-danger-outline:disabled {
+	border-color: #ced4da;
+	background: #ced4da;
+	color: #adb5bd;
+	cursor: default;
+}
+.btn-light {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	padding: 0 20px;
+	border: 1px solid #adb5bd;
+	background-color: #adb5bd;
+	color: #fff;
+	font-size: 13px;
+}
+.btn-light.disabled, .btn-light:disabled {
+	border-color: #ced4da;
+	background: #ced4da;
+	color: #adb5bd;
+	cursor: default;
+}
+.btn-light-outline {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	padding: 0 20px;
+	border: 1px solid #adb5bd;
+	background-color: #fff;
+	color: #adb5bd;
+	font-size: 13px;
+}
+.btn-light-outline.disabled, .btn-light-outline:disabled {
+	border-color: #ced4da;
+	background: #ced4da;
+	color: #adb5bd;
+	cursor: default;
+}
+.btn-dark {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	padding: 0 20px;
+	border: 1px solid #212529;
+	background-color: #212529;
+	color: #fff;
+	font-size: 13px;
+}
+.btn-dark.disabled, .btn-dark:disabled {
+	border-color: #ced4da;
+	background: #ced4da;
+	color: #adb5bd;
+	cursor: default;
+}
+.btn-dark-outline {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	padding: 0 20px;
+	border: 1px solid #212529;
+	background-color: #fff;
+	color: #212529;
+	font-size: 13px;
+}
+.btn-dark-outline.disabled, .btn-dark-outline:disabled {
+	border-color: #ced4da;
+	background: #ced4da;
+	color: #adb5bd;
+	cursor: default;
+}
+.btn-m {
+	height: 30px;
+}
+.btn-l {
+	height: 50px;
+	font-size: 16px;
+}
+.btn-xl {
+	height: 60px;
+	font-size: 16px;
+}
+.btn-block {
+	width: 100%;
+}
+.btn-area-l, .btn-area-c, .btn-area-r, .btn-area-wrap {
+	display: flex;
+	align-items: center;
+}
+.btn-area-l [class^=btn-] + [class^=btn-], .btn-area-c [class^=btn-] + [class^=btn-], .btn-area-r [class^=btn-] + [class^=btn-], .btn-area-wrap [class^=btn-] + [class^=btn-] {
+	margin-left: 10px;
+}
+.btn-area-wrap {
+	justify-content: space-between;
+}
+.btn-area-l {
+	justify-content: flex-start;
+}
+.btn-area-c {
+	justify-content: center;
+}
+.btn-area-r {
+	justify-content: flex-end;
+}
