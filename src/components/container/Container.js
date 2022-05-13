@@ -1,50 +1,82 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import Button from "components/button/Button";
-import StyledButton from "components/button/StyledButton";
+import Modal from 'components/modal/Modal';
+// import StyledButton from "components/button/StyledButton";
 import './container.scss';
 
 function Container() {
+
+	const [modalOpen, setModalOpen] = useState(false);
+
+	// open
+	const openModal = () => {
+		setModalOpen(true);
+		overflowCl(true);
+	};
+
+	// close
+	const closeModal = (event) => {
+		if (event.target !== event.currentTarget) return;
+		setModalOpen(false);
+		overflowCl(false);
+	};
+
+	// body 스크롤 막기
+	const overflowCl = ($isHidden) => {
+		const tLength = document.querySelectorAll('.layer-popup-wrap.selected').length;
+		$isHidden ? document.documentElement.classList.add('is-open') : tLength >= 0 && document.documentElement.classList.remove('is-open');
+	};
 	return (
 		<div id="container">
 			<div className="contents">
-				<StyledButton />
+				
+				{/* <StyledButton /> */}
 
 				<h2 style={{ color: 'red', fontSize: '30px', }}>Button</h2>
-				<Button className="btn-primary" value="BUTTOddN" />
-				<Button className="btn-secondary" value="BUTTON" hasMargin />
-				<Button className="btn-dark" value="BUTTON" />
-				<Button className="btn-default" value="BUTTON" />
-				<Button className="btn-light" value="BUTTON" />
+				<Button className="btn-primary" value="BUTTON" onClick={openModal}/>
+				<Button className="btn-primary-dark" value="BUTTON" />
+				<Button className="btn-primary-light" value="BUTTON" />
 				<br />
 				<br />
-				<Button className="btn-primary-outline" value="BUTTON" />
-				<Button className="btn-secondary-outline" value="BUTTON" />
-				<Button className="btn-dark-outline" value="BUTTON" />
-				<Button className="btn-default-outline" value="BUTTON" />
+				<Button className="btn-secondary" value="BUTTON" />
+				<Button className="btn-secondary-dark" value="BUTTON" />
+				<Button className="btn-secondary-light" value="BUTTON" />
+				<br />
+				<br />
+				<Button className="btn-accent" value="BUTTON" />
+				<Button className="btn-accent-dark" value="BUTTON" />
+				<Button className="btn-accent-light" value="BUTTON" />
+				<br />
+				<br />
+				<Button className="btn-success" value="BUTTON" />
+				<Button className="btn-info" value="BUTTON" />
+				<Button className="btn-warning" value="BUTTON" />
+				<Button className="btn-danger" value="BUTTON" />
 				<br />
 				<br />
 				<Button className="btn-primary btn-m" value="BUTTON" />
 				<Button className="btn-primary" value="BUTTON" />
 				<Button className="btn-primary btn-l" value="BUTTON" />
 				<Button className="btn-primary btn-xl" value="BUTTON" />
-				<Button className="btn-primary btn-xl" value="BUTTON" disabled />
 				<br />
 				<br />
-				<div className="btn-area-wrap">
-					<div className="btn-area-l">
-						<Button className="btn-default-outline btn-w-140" value="BUTTON" />
-						<Button className="btn-primary btn-w-140" value="BUTTON" />
-					</div>
-					<div className="btn-area-c">
-						<Button className="btn-default-outline btn-w-140" value="BUTTON" />
-						<Button className="btn-primary btn-w-140" value="BUTTON" />
-					</div>
-					<div className="btn-area-r">
-						<Button className="btn-default-outline btn-w-140" value="BUTTON" />
-						<Button className="btn-primary btn-w-140" value="BUTTON" />
-					</div>
-				</div>
+				<Button className="btn-primary btn-xl btn-block" value="BUTTON" disabled />
 			</div>
+			<Modal
+				className={"layer-popup-wrap type-bottom" + (modalOpen ? " selected" : "")}
+				close={closeModal}
+				title="Modal Title"
+			>
+				ModalModalModalModalModalModalModal<br/>
+				ModalModalModalModalModalModalModal<br/>
+				ModalModalModalModalModalModalModal<br/>
+				ModalModalModalModalModalModalModal<br/>
+				ModalModalModalModalModalModalModal<br/>
+				ModalModalModalModalModalModalModal<br/>
+				ModalModalModalModalModalModalModal<br/>
+				ModalModalModalModalModalModalModal<br/>
+				ModalModalModalModalModalModalModal
+			</Modal>
 		</div>
 	);
 };

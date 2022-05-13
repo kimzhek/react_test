@@ -45,6 +45,13 @@ div {
 
 	@at-root
 	@content;
+
+	overflow: hidden;
+    will-change: transform;
+    transition: transform 200ms linear 0s;
+    transform: translateY(calc(env(safe-area-inset-top) + 12px)) scale(0.961538);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 // List Data
@@ -144,3 +151,19 @@ Theme
 ui 프레임워크 라이브러리
 Material UI
 Semantic UI React
+
+
+
+
+
+
+/* header */
+
+import React, { useState } from 'react';
+
+const [isOpen, setMenu] = useState(false);  // 메뉴의 초기값을 false로 설정
+const toggleMenu = () => {
+	setMenu(isOpen => !isOpen); // on,off
+}
+
+<header id="header" className={isOpen ? `selected` : ''}>

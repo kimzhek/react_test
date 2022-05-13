@@ -2,175 +2,175 @@
 @import 'assets/scss/_mixin.scss';
 
 /* footer */
-#footer {
-	$dark: #333;
-	padding: 20px 0 100px;
-	background-color: $dark;
-	flex-shrink: 0;
+// #footer {
+// 	$dark: #333;
+// 	padding: 20px 0 100px;
+// 	background-color: $dark;
+// 	flex-shrink: 0;
 
-	.footer-inner {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		width: $min-content-w;
-		margin: 0 auto;
-	}
+// 	.footer-inner {
+// 		display: flex;
+// 		flex-wrap: wrap;
+// 		justify-content: space-between;
+// 		width: $min-content-w;
+// 		margin: 0 auto;
+// 	}
 
-	.f-menu {
-		display: flex;
+// 	.f-menu {
+// 		display: flex;
 
-		li {
-			a {
-				position: relative;
-				display: block;
-				padding: 0 30px;
-				color: $white;
-				line-height: 50px;
+// 		li {
+// 			a {
+// 				position: relative;
+// 				display: block;
+// 				padding: 0 30px;
+// 				color: $white;
+// 				line-height: 50px;
 
-				&:before {
-					content: '';
-					position: absolute;
-					left: 0;
-					top: 50%;
-					width: 1px;
-					height: 10px;
-					margin-top: -5px;
-					background-color: #ddd;
-				}
-			}
+// 				&:before {
+// 					content: '';
+// 					position: absolute;
+// 					left: 0;
+// 					top: 50%;
+// 					width: 1px;
+// 					height: 10px;
+// 					margin-top: -5px;
+// 					background-color: #ddd;
+// 				}
+// 			}
 
-			&:first-child a {
-				padding-left: 0;
+// 			&:first-child a {
+// 				padding-left: 0;
 
-				&:before {
-					display: none;
-				}
-			}
-		}
-	}
+// 				&:before {
+// 					display: none;
+// 				}
+// 			}
+// 		}
+// 	}
 
-	.f-family-site {
-		position: relative;
+// 	.f-family-site {
+// 		position: relative;
 
-		button {
-			position: relative;
-			display: block;
-			width: 180px;
-			height: 40px;
-			padding-left: 20px;
-			border: 1px solid $line-c8;
-			color: $white;
-			font-size: 12px;
-			text-align: left;
+// 		button {
+// 			position: relative;
+// 			display: block;
+// 			width: 180px;
+// 			height: 40px;
+// 			padding-left: 20px;
+// 			border: 1px solid $line-c8;
+// 			color: $white;
+// 			font-size: 12px;
+// 			text-align: left;
 
-			&:after {
-				content: '';
-				position: absolute;
-				right: 20px;
-				top: 50%;
-				width: 9px;
-				height: 5px;
-				margin-top: -2px;
-				background-image: url(''+$url-common+'icon_f_button.png');
-				transform: rotate(-180deg);
-			}
-		}
+// 			&:after {
+// 				content: '';
+// 				position: absolute;
+// 				right: 20px;
+// 				top: 50%;
+// 				width: 9px;
+// 				height: 5px;
+// 				margin-top: -2px;
+// 				background-image: url(''+$url-common+'icon_f_button.png');
+// 				transform: rotate(-180deg);
+// 			}
+// 		}
 
-		.dropdown-box {
-			overflow: hidden;
-			position: absolute !important;
-			bottom: 10px;
-			left: 0;
-			transform: translateY(100%);
-			width: 100%;
-			min-width: 180px;
-			border: 1px solid $line-e0;
-			background-color: $white;
-			line-height: 1.5;
-			z-index: 5;
-		}
+// 		.dropdown-box {
+// 			overflow: hidden;
+// 			position: absolute !important;
+// 			bottom: 10px;
+// 			left: 0;
+// 			transform: translateY(100%);
+// 			width: 100%;
+// 			min-width: 180px;
+// 			border: 1px solid $line-e0;
+// 			background-color: $white;
+// 			line-height: 1.5;
+// 			z-index: 5;
+// 		}
 
-		.dropdown-list {
-			li {
-				a {
-					display: block;
-					background-size: 13px 13px;
-					background-position: left 9px;
-					background-repeat: no-repeat;
-					color: $dark;
-					line-height: 30px;
-					padding: 10px 10px 10px 20px;
+// 		.dropdown-list {
+// 			li {
+// 				a {
+// 					display: block;
+// 					background-size: 13px 13px;
+// 					background-position: left 9px;
+// 					background-repeat: no-repeat;
+// 					color: $dark;
+// 					line-height: 30px;
+// 					padding: 10px 10px 10px 20px;
 
-					&:hover {
-						color: $secondary;
-					}
-				}
-			}
+// 					&:hover {
+// 						color: $secondary;
+// 					}
+// 				}
+// 			}
 
 
-		}
-	}
+// 		}
+// 	}
 
-	.f-info {
-		width: 100%;
-		color: $light;
-		line-height: 30px;
+// 	.f-info {
+// 		width: 100%;
+// 		color: $light;
+// 		line-height: 30px;
 
-		button {
-			position: relative;
-			display: block;
-			padding-right: 30px;
-			color: $white;
-			font-size: 20px;
-			line-height: 60px;
+// 		button {
+// 			position: relative;
+// 			display: block;
+// 			padding-right: 30px;
+// 			color: $white;
+// 			font-size: 20px;
+// 			line-height: 60px;
 
-			&:after {
-				content: '';
-				position: absolute;
-				right: 0;
-				top: 50%;
-				width: 9px;
-				height: 5px;
-				margin-top: -2px;
-				background-image: url(''+$url-common+'icon_f_button.png');
-				transform: rotate(-180deg);
-				transition: transform .2s;
-			}
-		}
+// 			&:after {
+// 				content: '';
+// 				position: absolute;
+// 				right: 0;
+// 				top: 50%;
+// 				width: 9px;
+// 				height: 5px;
+// 				margin-top: -2px;
+// 				background-image: url(''+$url-common+'icon_f_button.png');
+// 				transform: rotate(-180deg);
+// 				transition: transform .2s;
+// 			}
+// 		}
 
-		.info-content {
-			overflow: hidden;
+// 		.info-content {
+// 			overflow: hidden;
 
-			.content-inner {
-				@include slideAnimate(0, -1000px, .5s, cubic-bezier(1, 0, 1, 1));
-			}
-		}
+// 			.content-inner {
+// 				@include slideAnimate(0, -1000px, .5s, cubic-bezier(1, 0, 1, 1));
+// 			}
+// 		}
 
-		&.selected {
-			.content-inner {
-				@include slideAnimate(600px, 0, .4s, cubic-bezier(0, 0, 0, 1));
-			}
+// 		&.selected {
+// 			.content-inner {
+// 				@include slideAnimate(600px, 0, .4s, cubic-bezier(0, 0, 0, 1));
+// 			}
 
-			button {
-				&:after {
-					transform: rotate(0);
-				}
-			}
-		}
+// 			button {
+// 				&:after {
+// 					transform: rotate(0);
+// 				}
+// 			}
+// 		}
 
-		.info {
-			li {
-				display: flex;
+// 		.info {
+// 			li {
+// 				display: flex;
 
-				strong {
-					width: 160px;
-					font-weight: $font-regular;
-				}
-			}
-		}
+// 				strong {
+// 					width: 160px;
+// 					font-weight: $font-regular;
+// 				}
+// 			}
+// 		}
 
-		.copyright {
-			margin-top: 30px;
-		}
-	}
-}
+// 		.copyright {
+// 			margin-top: 30px;
+// 		}
+// 	}
+// }

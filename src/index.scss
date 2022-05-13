@@ -1,5 +1,5 @@
-@import './assets/scss/_variables.scss';
-@import './assets/scss/_mixin.scss';
+@import './assets/scss/variables';
+@import './assets/scss/mixin';
 
 /* default */
 html, body, div, span, applet, object, iframe,
@@ -151,30 +151,29 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 /* common */
-html,
-body {
-	height: 100%;
+:root {
+	@each $theme, $map in $themes {
+		@if($theme == light){  
+			@each $key, $submap in $map {
+				$value: map-get(map-get($themes, $theme), '#{$key}');
+				--#{$key}:#{$value};
+			}
+		}@else{
+			// &[data-theme="dark"] {
+			@media (prefers-color-scheme: dark) {
+				@each $key, $submap in $map {
+					$value: map-get(map-get($themes, $theme), '#{$key}');
+					--#{$key}:#{$value};
+				}
+			}
+		}
+	}
 }
-
-body,
-button,
-input,
-select,
-textarea {
-	color: $default;
-	font-size: 14px;
-	font-weight: $font-regular;
-	font-family: 'Noto Sans KR', sans-serif;
-	letter-spacing: -.5px;
-}
-#wrap {
-	position: relative;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	width: 100%;
-	min-width: $min-content-w;
-	min-height: 100%;
-	background-image:url(''+$url-common+'icon_close.png');
+html, body {height:100%;}
+body, button, input, select, textarea {
+	color:$font-color-default;
+	font-size:$font-size-default;
+	font-weight:$font-weight-regular;
+	font-family:$font-family-base;
+	letter-spacing:-.5px;
 }
