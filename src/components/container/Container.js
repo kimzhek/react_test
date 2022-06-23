@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import Button from "components/button/Button";
 import Modal from 'components/modal/Modal';
+import Chart from 'components/chart/Chart';
+import { Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 // import StyledButton from "components/button/StyledButton";
 import './container.scss';
+// import 'swiper/css';
 
 function Container() {
 
@@ -25,6 +29,19 @@ function Container() {
 	const overflowCl = ($isHidden) => {
 		const tLength = document.querySelectorAll('.layer-popup-wrap.selected').length;
 		$isHidden ? document.documentElement.classList.add('is-open') : tLength >= 0 && document.documentElement.classList.remove('is-open');
+	};
+
+	const pagination = {
+		type: 'fraction',
+		formatFractionCurrent: function (number) {
+			return ('0' + number).slice(-2);
+		},
+		formatFractionTotal: function (number) {
+			return ('0' + number).slice(-2);
+		},
+		renderFraction: function (currentClass, totalClass) {
+			return `<span class="${currentClass}"></span> / <span class="${totalClass}"></span>`;
+		}
 	};
 	return (
 		<div id="container">
@@ -61,6 +78,21 @@ function Container() {
 				<br />
 				<br />
 				<Button className="btn-primary btn-xl btn-block" value="BUTTON" disabled />
+
+				<Swiper
+					className="main-banner-section"
+					modules={[Pagination]}
+					pagination={pagination}
+					loop
+					wrapperTag="ul"
+					>
+					<SwiperSlide tag="li">Slide 1</SwiperSlide>
+					<SwiperSlide tag="li">Slide 2</SwiperSlide>
+					<SwiperSlide tag="li">Slide 3</SwiperSlide>
+					<SwiperSlide tag="li">Slide 4</SwiperSlide>
+				</Swiper>
+
+				<Chart></Chart>
 			</div>
 			<Modal
 				className={"layer-popup-wrap type-bottom" + (modalOpen ? " selected" : "")}
