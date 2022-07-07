@@ -243,7 +243,7 @@ html {
 		.swiper-slide {
 			flex-shrink: 0;
 			-webkit-transform: translateZ(0);
-				height:300px;
+			height:300px;
 			a {
 				display:block;
 				height:300px;
@@ -253,6 +253,10 @@ html {
 				width:100%;
 				vertical-align:top;
 			}
+			&[data-swiper-slide-index="0"] {background:#EB5D5D;}
+			&[data-swiper-slide-index="1"] {background:#FF7A00;}
+			&[data-swiper-slide-index="2"] {background:#FFD600;}
+			&[data-swiper-slide-index="3"] {background:#47BC34;}
 		}
 	}
 	.swiper-pagination {
@@ -293,6 +297,7 @@ html {
 		canvas {
 			border-radius:100%;
 			box-shadow: 0 0 0 10px #fff, inset 0 0 0 18px #fff;
+			transform: rotate(90deg);
 		}
 		.total {
 			display:flex;

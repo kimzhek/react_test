@@ -4,9 +4,11 @@ import Modal from 'components/modal/Modal';
 import Chart from 'components/chart/Chart';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { BottomSheet } from 'react-spring-bottom-sheet'
 // import StyledButton from "components/button/StyledButton";
 import './container.scss';
 // import 'swiper/css';
+import 'react-spring-bottom-sheet/dist/style.css'
 
 function Container() {
 
@@ -43,6 +45,9 @@ function Container() {
 			return `<span class="${currentClass}"></span> / <span class="${totalClass}"></span>`;
 		}
 	};
+
+	const [open, setOpen] = useState(false)
+
 	return (
 		<div id="container">
 			<div className="contents">
@@ -93,6 +98,29 @@ function Container() {
 				</Swiper>
 
 				<Chart></Chart>
+
+				<button onClick={() => setOpen(true)}>Open</button>
+				<BottomSheet open={open}>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+				</BottomSheet>
 			</div>
 			<Modal
 				className={"layer-popup-wrap type-bottom" + (modalOpen ? " selected" : "")}

@@ -7,6 +7,9 @@ import { Doughnut } from 'react-chartjs-2';
 function ChartComponent() {
 	ChartJS.register(ArcElement, Legend);
 
+	/*
+	* 데이터
+	*/
 	const config = [
 		{
 			label: "경형",
@@ -52,6 +55,9 @@ function ChartComponent() {
 
 	const [data, setData] = useState(config);
 
+	/*
+	* chart 데이터
+	*/
 	const chartData = {
 		labels: data.map(e => e.label),
 		datasets: [
@@ -64,8 +70,10 @@ function ChartComponent() {
 		],
 	};
 
-
-	const options = {
+	/*
+	* chart 옵션
+	*/
+	const chartOptions = {
 		maintainAspectRatio: true, //false :  상위 div에 구속
 		plugins: {
 			htmlLegend: {
@@ -81,7 +89,10 @@ function ChartComponent() {
 		}
 	};
 
-	const disasterHandler = () => {
+	/*
+	* data 업데이트
+	*/
+	const refreshData = () => {
 		setData(
 			data.map(e => {
 				let randomValue = parseInt(Math.random()*100);
@@ -91,24 +102,22 @@ function ChartComponent() {
 		);
 	};
 
-
-	const arr =[];
-	data.forEach(e => arr.push(e.value));
-
-	let sum = 0;
-	for (let i = 0; i < arr.length; i++) {
-		sum += arr[i];
+	/*
+	* 보유차량 등록 총대수
+	*/
+	const arrDate = [];
+	data.forEach(e => arrDate.push(e.value));
+	let totalDate = 0;
+	for (let i = 0; i < arrDate.length; i++) {
+		totalDate += arrDate[i];
 	};
-
-	
-
 
 	// const htmlLegendPlugin = {
 	// 	id: "htmlLegend",
 	// 	afterUpdate(chart) {
 	// 		console.log('fdsfdsfds')
 	// 		const jsLegend = document.getElementById("legend-container");
-	// 		const items = chart.options.plugins.legend.labels.generateLabels(chart);
+	// 		const items = chart.chartOptions.plugins.legend.labels.generateLabels(chart);
 	// 		const data = chart.data.datasets[0].data;
 	// 		const ul = document.createElement("ul");
 	// 		jsLegend.parentNode.innerHtML = "";
@@ -146,12 +155,12 @@ function ChartComponent() {
 			</ul>
 			<div className="chart-box">
 				<div className="total">
-					<strong>{sum}</strong>
+					<strong>{totalDate}</strong>
 					<p>보유차량 등록대수</p>
 				</div>
-				{/* <Doughnut data={chartData} options={options} plugins={[htmlLegendPlugin]} /> */}
-				<Doughnut data={chartData} options={options} />
-				<button onClick={disasterHandler} className="refresh">새로고침</button>
+				{/* <Doughnut data={chartData} options={chartOptions} plugins={[htmlLegendPlugin]} /> */}
+				<Doughnut data={chartData} options={chartOptions} />
+				<button onClick={refreshData} className="refresh">새로고침</button>
 			</div>
 			
 		</div>
