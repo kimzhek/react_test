@@ -48,6 +48,10 @@ function Container() {
 
 	const [open, setOpen] = useState(false)
 
+	function onDismiss() {
+		setOpen(false)
+	}
+
 	return (
 		<div id="container">
 			<div className="contents">
@@ -55,7 +59,7 @@ function Container() {
 				{/* <StyledButton /> */}
 
 				<h2 style={{ color: 'red', fontSize: '30px', }}>Button</h2>
-				<Button className="btn-primary" value="BUTTON" onClick={openModal}/>
+				<Button className="btn-primary" value="BUTTON" />
 				<Button className="btn-primary-dark" value="BUTTON" />
 				<Button className="btn-primary-light" value="BUTTON" />
 				<br />
@@ -99,8 +103,49 @@ function Container() {
 
 				<Chart></Chart>
 
-				<button onClick={() => setOpen(true)}>Open</button>
-				<BottomSheet open={open}>
+
+				<label className="gc-switch">
+					<span>Switch</span>
+				</label>
+
+				<br/>
+
+				<Button className="btn-primary" value="Bottom Sheet" onClick={openModal} />
+				<Button className="btn-secondary" value="Bottom Sheet drag" onClick={setOpen} />
+				<BottomSheet
+					className="aaaaaaaaa"
+					// open
+					open={open}
+					onDismiss={onDismiss}
+					// defaultSnap={({ maxHeight }) => maxHeight -100}
+					// snapPoints={({ minHeight, maxHeight }) => [
+					// 	minHeight,
+					// 	maxHeight - 66,
+					// 	// maxHeight / 4,
+					// 	// maxHeight * 0.6,
+					// ]}
+
+					snapPoints={({ minHeight, maxHeight }) => [minHeight, maxHeight - 80]}
+					// snapPoints={({  maxHeight }) => [ maxHeight-100]}
+					expandOnContentDrag
+				>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
+					My awesome content here<br/>
 					My awesome content here<br/>
 					My awesome content here<br/>
 					My awesome content here<br/>
